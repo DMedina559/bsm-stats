@@ -48,7 +48,7 @@ if __name__ == "__main__":
     with open("downloads.json", "w") as f:
         json.dump({
             "schemaVersion": 1,
-            "label": "Total Installs",
+            "label": "Downloads",
             "message": format_num(get_stats()),
-            "color": "green"
+            "color": "orange"
         }, f)
