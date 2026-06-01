@@ -1,15 +1,26 @@
 import requests, json, os
 
 def get_stats():
-    # 1. PyPI Installs (via PePy)
+    # 1. PyPI Installs
     try:
-        pypi = requests.get("https://api.pepy.tech/api/v2/projects/bedrock-server-manager").json().get("total_downloads", 0)
-    except: pypi = 0
+        res = requests.get("https://img.shields.io/pypi/dt/bedrock-server-manager.json").json()
+        val_str = res.get("value", "0").replace(" ", "")
+        if val_str.endswith("k"):
+            pypi = int(float(val_str[:-1]) * 1000)
+        elif val_str.endswith("M"):
+            pypi = int(float(val_str[:-1]) * 1000000)
+        else:
+            pypi = int(val_str)
+    except Exception as e:
+        print(f"Failed to fetch PyPI stats: {e}")
+        pypi = 0
     
     # 2. Docker Hub Pulls
     try:
         docker = requests.get("https://hub.docker.com/v2/repositories/dmedina559/bedrock-server-manager/").json().get("pull_count", 0)
-    except: docker = 0
+    except Exception as e:
+        print(f"Failed to fetch Docker stats: {e}")
+        docker = 0
 
     # 3. GitHub Container Registry (GHCR) Pulls
     ghcr = 0
