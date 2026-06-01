@@ -17,45 +17,20 @@ def get_stats():
         docker = 0
 
     # 3. GitHub Container Registry (GHCR) Pulls
-    ghcr = 0
-    token = os.environ.get("GITHUB_TOKEN")
-    if token:
-        query = """
-        query {
-          user(login: "DMedina559") {
-            packages(first: 1, names: ["bedrock-server-manager"]) {
-              nodes {
-                statistics {
-                  downloadsTotalCount
-                }
-              }
-            }
-          }
-        }
-        """
-        try:
-            res = requests.post(
-                "https://api.github.com/graphql", 
-                json={'query': query}, 
-                headers={"Authorization": f"Bearer {token}"}
-            ).json()
-            
-            if 'errors' in res:
-                print(f"GHCR GraphQL Error: {res['errors']}")
-                ghcr = 0
-            elif 'data' not in res:
-                print(f"GHCR API returned unexpected response: {res}")
-                ghcr = 0
-            else:
-                nodes = res.get('data', {}).get('user', {}).get('packages', {}).get('nodes', [])
-                if nodes and len(nodes) > 0:
-                    ghcr = nodes[0].get('statistics', {}).get('downloadsTotalCount', 0)
-                else:
-                    print("GHCR API returned no packages.")
-                    ghcr = 0
-        except Exception as e:
-            print(f"Failed to fetch GHCR stats: {e}")
+    try:
+        url = "https://github.com/DMedina559/bedrock-server-manager/pkgs/container/bedrock-server-manager"
+        html = requests.get(url).text
+        # Scrape the Total downloads count from the HTML
+        import re
+        match = re.search(r'Total downloads</span>\s*<h3[^>]*>([0-9,]+)</h3>', html)
+        if match:
+            ghcr = int(match.group(1).replace(',', ''))
+        else:
+            print("Failed to find GHCR downloads in HTML.")
             ghcr = 0
+    except Exception as e:
+        print(f"Failed to fetch GHCR stats: {e}")
+        ghcr = 0
 
     total = pypi + docker + ghcr
     print(f"PyPI: {pypi} | Docker Hub: {docker} | GHCR: {ghcr} | TOTAL: {total}")
