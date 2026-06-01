@@ -3,14 +3,8 @@ import requests, json, os
 def get_stats():
     # 1. PyPI Installs
     try:
-        res = requests.get("https://img.shields.io/pypi/dt/bedrock-server-manager.json").json()
-        val_str = res.get("value", "0").replace(" ", "")
-        if val_str.endswith("k"):
-            pypi = int(float(val_str[:-1]) * 1000)
-        elif val_str.endswith("M"):
-            pypi = int(float(val_str[:-1]) * 1000000)
-        else:
-            pypi = int(val_str)
+        res = requests.get("https://pepy.tech/api/v2/projects/bedrock-server-manager").json()
+        pypi = res.get("total_downloads", 0)
     except Exception as e:
         print(f"Failed to fetch PyPI stats: {e}")
         pypi = 0
@@ -29,7 +23,7 @@ def get_stats():
         query = """
         query {
           user(login: "DMedina559") {
-            packages(first: 1, names: ["bedrock-server-manager"], packageType: CONTAINER) {
+            packages(first: 1, names: ["bedrock-server-manager"]) {
               nodes {
                 statistics {
                   downloadsTotalCount
@@ -45,7 +39,20 @@ def get_stats():
                 json={'query': query}, 
                 headers={"Authorization": f"Bearer {token}"}
             ).json()
-            ghcr = res['data']['user']['packages']['nodes'][0]['statistics']['downloadsTotalCount']
+            
+            if 'errors' in res:
+                print(f"GHCR GraphQL Error: {res['errors']}")
+                ghcr = 0
+            elif 'data' not in res:
+                print(f"GHCR API returned unexpected response: {res}")
+                ghcr = 0
+            else:
+                nodes = res.get('data', {}).get('user', {}).get('packages', {}).get('nodes', [])
+                if nodes and len(nodes) > 0:
+                    ghcr = nodes[0].get('statistics', {}).get('downloadsTotalCount', 0)
+                else:
+                    print("GHCR API returned no packages.")
+                    ghcr = 0
         except Exception as e:
             print(f"Failed to fetch GHCR stats: {e}")
             ghcr = 0
