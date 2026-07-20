@@ -22,7 +22,7 @@ def get_stats():
         html = requests.get(url).text
         # Scrape the Total downloads count from the HTML
         import re
-        match = re.search(r'Total downloads</span>\s*<h3[^>]*>([0-9,]+)</h3>', html)
+        match = re.search(r'Total downloads</span>\s*<h3[^>]*title="([0-9,]+)"', html)
         if match:
             ghcr = int(match.group(1).replace(',', ''))
         else:
