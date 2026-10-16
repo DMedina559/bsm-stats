@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "primary_project": "bedrock-server-manager",
+  "projects": {
+    "bedrock-server-manager": {
+      "name": "Bedrock Server Manager",
+      "url": "https://github.com/DMedina559/bedrock-server-manager",
+      "sources": {
+        "pypi": {
+          "kind": "pypi",
+          "package": "bedrock-server-manager"
+        },
+        "docker": {
+          "kind": "docker",
+          "repository": "dmedina559/bedrock-server-manager"
+        },
+        "ghcr": {
+          "kind": "ghcr",
+          "owner": "DMedina559",
+          "repository": "bedrock-server-manager",
+          "package": "bedrock-server-manager"
+        }
+      }
+    },
+    "bsm-api-client": {
+      "name": "BSM API Client",
+      "url": "https://github.com/DMedina559/bsm-api-client",
+      "sources": {
+        "pypi": {
+          "kind": "pypi",
+          "package": "bsm-api-client"
+        }
+      }
+    },
+    "bsm-cli": {
+      "name": "BSM CLI",
+      "url": "https://github.com/DMedina559/bsm-cli",
+      "sources": {
+        "pypi": {
+          "kind": "pypi",
+          "package": "bsm-cli"
+        }
+      }
+    },
+    "bsm-test-utils": {
+      "name": "BSM Test Utilities",
+      "url": "https://github.com/DMedina559/bsm-test-utils",
+      "sources": {
+        "pypi": {
+          "kind": "pypi",
+          "package": "bsm-test-utils"
+        }
+      }
+    }
+  }
+}
