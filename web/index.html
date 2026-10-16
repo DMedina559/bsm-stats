@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en" data-theme="default" data-mode="dark" data-density="comfort">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Public distribution statistics for Bedrock Server Manager: downloads, container pulls, source health, and historical growth."
+    />
+    <title>BSM distribution statistics</title>
+    <link rel="icon" href="assets/bsm.png" type="image/png" />
+    <script src="appearance.js"></script>
+    <link rel="stylesheet" href="vendor/bsm/tokens.css" />
+    <link rel="stylesheet" href="vendor/bsm/default.css" />
+    <link rel="stylesheet" href="vendor/bsm/density.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#content">Skip to statistics</a>
+    <div class="workspace-topbar">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="https://github.com/DMedina559/bedrock-server-manager">BSM</a
+        ><span aria-hidden="true">/</span
+        ><span aria-current="page">Statistics</span>
+      </nav>
+      <div class="appearance-controls" aria-label="Appearance">
+        <label
+          >Mode
+          <select id="mode">
+            <option value="system">System</option>
+            <option value="dark">Dark</option>
+            <option value="light">Light</option>
+          </select></label
+        >
+        <label
+          >Density
+          <select id="density">
+            <option value="comfort">Comfort</option>
+            <option value="compact">Compact</option>
+          </select></label
+        >
+      </div>
+    </div>
+    <main id="content" tabindex="-1">
+      <header class="header">
+        <div class="brand">
+          <img src="assets/bsm-logo.png" width="56" height="56" alt="" />
+          <div>
+            <div class="eyebrow">BEDROCK SERVER MANAGER</div>
+            <h1>Distribution statistics</h1>
+            <p>Downloads and container pulls across the BSM ecosystem.</p>
+          </div>
+        </div>
+        <a class="action-link" href="https://github.com/DMedina559/bsm-stats"
+          >View repository ↗</a
+        >
+      </header>
+      <div id="notice" role="status" aria-live="polite">
+        Loading published statistics…
+      </div>
+      <section class="toolbar" aria-label="Display options">
+        <label
+          >Project
+          <select id="project"></select
+        ></label>
+        <label
+          >History
+          <select id="range">
+            <option value="30">Last 30 days</option>
+            <option value="90">Last 90 days</option>
+            <option value="all">All history</option>
+            <option value="custom">Custom dates</option>
+          </select></label
+        >
+        <label>From <input id="from" type="date" /></label
+        ><label>Through <input id="through" type="date" /></label>
+        <div class="exports">
+          <a class="action-link" href="stats.json" download>Current JSON</a
+          ><a class="action-link" href="history.csv" download>History CSV</a
+          ><a
+            class="action-link"
+            id="export-history"
+            href="#"
+            download="bsm-history.json"
+            >History JSON</a
+          >
+        </div>
+      </section>
+      <section id="overview" aria-label="Current counts"></section>
+      <section
+        id="source-cards"
+        aria-label="Counts by distribution source"
+      ></section>
+      <section class="panel">
+        <div class="section-heading">
+          <h2>Distribution history</h2>
+          <span id="history-caption"></span>
+        </div>
+        <p class="muted">
+          Lines stop at missing or stale observations. Select a source below to
+          inspect exact counts.
+        </p>
+        <div
+          id="chart"
+          role="img"
+          aria-label="Historical distribution counts"
+        ></div>
+        <div id="legend" class="legend"></div>
+        <p id="chart-empty" hidden>No fresh observations in this date range.</p>
+      </section>
+      <section class="panel">
+        <h2>Source health</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Source</th>
+                <th>Count</th>
+                <th>Status</th>
+                <th>Last successful collection (UTC)</th>
+                <th>Counting basis</th>
+              </tr>
+            </thead>
+            <tbody id="sources"></tbody>
+          </table>
+        </div>
+        <p id="freshness" class="muted"></p>
+      </section>
+      <section class="panel">
+        <h2>Daily observations</h2>
+        <p class="muted">
+          The selected date range is shown below. Stale values retain their last
+          successful timestamp.
+        </p>
+        <div class="table-wrap observations">
+          <table>
+            <thead>
+              <tr>
+                <th>Date (UTC)</th>
+                <th>Source</th>
+                <th>Count</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="observations"></tbody>
+          </table>
+        </div>
+      </section>
+      <section class="notes">
+        <h2>What these numbers mean</h2>
+        <p>
+          These are distribution events, not unique users, active installations,
+          or running servers. Repeat downloads, automated builds, caching, and
+          provider counting rules affect the totals. Container pulls and package
+          downloads use different units; the combined count is a convenience
+          measure.
+        </p>
+        <p>
+          PyPI counts come from PePy, Docker pulls from Docker Hub, and GHCR
+          downloads from GitHub’s public package page. Optional npm sources
+          count completed UTC days from their configured start date. Provider
+          corrections are accepted and flagged; growth is withheld across
+          corrections, configuration changes, stale observations, and missing
+          days.
+        </p>
+        <p>
+          Growth compares complete observations across 1, 7, and 30 days.
+          History begins when exact collection is enabled; older rounded badges
+          are not reconstructed into exact counts. Each UTC day retains its
+          latest collection attempt.
+        </p>
+        <a href="https://github.com/DMedina559/bsm-stats"
+          >Source code and collection details ↗</a
+        >
+        · <a href="THIRD_PARTY_NOTICES.md">Theme attribution</a>
+      </section>
+    </main>
+  </body>
+</html>

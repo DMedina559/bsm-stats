@@ -2,37 +2,55 @@ name: Update Stats
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "17 6 * * *"
   workflow_dispatch:
 
 permissions:
-  contents: write
-  packages: read
+  contents: read
+
+concurrency:
+  group: stats-publication
+  cancel-in-progress: false
 
 jobs:
   update-stats:
+    # Manual runs on a feature branch must not write production statistics.
+    if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      
-      - name: Set up Python
-        uses: actions/setup-python@v4
         with:
-          python-version: '3.x'
-          
+          ref: main
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.14'
+          cache: pip
       - name: Install dependencies
-        run: pip install requests
-      
-      - name: Fetch Stats and Update JSON
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python -m pip install -r requirements.txt
+      - name: Collect statistics and summarize source health
         run: python update_stats.py
-        
-      - name: Commit and Push changes
+      - name: Commit changed statistics
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add downloads.json
-          git commit -m "Update download stats" || exit 0
-          git push
+          git add downloads.json stats.json history history.csv badges
+          if git diff --cached --quiet; then
+            echo "No statistics changed."
+          else
+            git commit -m "Update download stats"
+            git push origin HEAD:main
+          fi
+      - name: Report degraded collection
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          stats = json.loads(Path("stats.json").read_text())
+          if stats["status"] != "fresh":
+              raise SystemExit("Collection degraded; preserved values were published. See the source health summary.")
+          PY
