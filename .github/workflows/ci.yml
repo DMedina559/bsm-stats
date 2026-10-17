@@ -35,9 +35,13 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.txt
       - run: python -m unittest discover -s tests -v
-      - uses: actions/setup-node@v4
+      - if: matrix.python == '3.14'
+        uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --check web/app.js
-      - run: node --check web/appearance.js
-      - run: node --test tests/dashboard.test.cjs
+      - if: matrix.python == '3.14'
+        run: node --check web/app.js
+      - if: matrix.python == '3.14'
+        run: node --check web/appearance.js
+      - if: matrix.python == '3.14'
+        run: node --test tests/dashboard.test.cjs
