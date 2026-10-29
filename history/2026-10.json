@@ -1182,6 +1182,97 @@
           "total": 2579
         }
       }
+    },
+    "2026-10-29": {
+      "collected_at": "2026-10-29T12:55:03.139029Z",
+      "projects": {
+        "bedrock-server-manager": {
+          "sources": {
+            "docker": {
+              "count": 22172,
+              "decreased": false,
+              "identity": {
+                "kind": "docker",
+                "repository": "dmedina559/bedrock-server-manager"
+              },
+              "sampled_at": "2026-10-29T12:55:03.139029Z",
+              "status": "fresh"
+            },
+            "ghcr": {
+              "count": 2941,
+              "decreased": false,
+              "identity": {
+                "kind": "ghcr",
+                "owner": "DMedina559",
+                "package": "bedrock-server-manager",
+                "repository": "bedrock-server-manager"
+              },
+              "sampled_at": "2026-10-29T12:55:03.139029Z",
+              "status": "fresh"
+            },
+            "pypi": {
+              "count": 76306,
+              "decreased": false,
+              "identity": {
+                "kind": "pypi",
+                "package": "bedrock-server-manager"
+              },
+              "sampled_at": "2026-10-29T12:55:03.139029Z",
+              "status": "fresh"
+            }
+          },
+          "status": "fresh",
+          "total": 101419
+        },
+        "bsm-api-client": {
+          "sources": {
+            "pypi": {
+              "count": 19508,
+              "decreased": false,
+              "identity": {
+                "kind": "pypi",
+                "package": "bsm-api-client"
+              },
+              "sampled_at": "2026-10-29T12:55:03.139029Z",
+              "status": "fresh"
+            }
+          },
+          "status": "fresh",
+          "total": 19508
+        },
+        "bsm-cli": {
+          "sources": {
+            "pypi": {
+              "count": 4063,
+              "decreased": false,
+              "identity": {
+                "kind": "pypi",
+                "package": "bsm-cli"
+              },
+              "sampled_at": "2026-10-29T12:55:03.139029Z",
+              "status": "fresh"
+            }
+          },
+          "status": "fresh",
+          "total": 4063
+        },
+        "bsm-test-utils": {
+          "sources": {
+            "pypi": {
+              "count": 2590,
+              "decreased": false,
+              "identity": {
+                "kind": "pypi",
+                "package": "bsm-test-utils"
+              },
+              "sampled_at": "2026-10-29T12:55:03.139029Z",
+              "status": "fresh"
+            }
+          },
+          "status": "fresh",
+          "total": 2590
+        }
+      }
     }
   },
   "schema_version": 1
