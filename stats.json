@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-01T13:15:35.030838Z",
+  "collected_at": "2026-11-02T15:42:19.148986Z",
   "history": [
     "history/2026-10.json",
     "history/2026-11.json"
@@ -8,9 +8,9 @@
   "projects": {
     "bedrock-server-manager": {
       "growth": {
-        "daily": 422,
+        "daily": null,
         "monthly": null,
-        "weekly": 3152
+        "weekly": null
       },
       "milestones": {
         "next": 250000,
@@ -19,9 +19,9 @@
       "name": "Bedrock Server Manager",
       "sources": {
         "docker": {
-          "attempted_at": "2026-11-01T13:15:35.030838Z",
+          "attempted_at": "2026-11-02T15:42:19.148986Z",
           "basis": "provider_lifetime",
-          "count": 23252,
+          "count": 23625,
           "decreased": false,
           "error": null,
           "identity": {
@@ -29,13 +29,13 @@
             "repository": "dmedina559/bedrock-server-manager"
           },
           "label": "Docker Hub pulls",
-          "sampled_at": "2026-11-01T13:15:35.030838Z",
+          "sampled_at": "2026-11-02T15:42:19.148986Z",
           "status": "fresh"
         },
         "ghcr": {
-          "attempted_at": "2026-11-01T13:15:35.030838Z",
+          "attempted_at": "2026-11-02T15:42:19.148986Z",
           "basis": "provider_lifetime",
-          "count": 2999,
+          "count": 3015,
           "decreased": false,
           "error": null,
           "identity": {
@@ -45,33 +45,33 @@
             "repository": "bedrock-server-manager"
           },
           "label": "GHCR downloads",
-          "sampled_at": "2026-11-01T13:15:35.030838Z",
+          "sampled_at": "2026-11-02T15:42:19.148986Z",
           "status": "fresh"
         },
         "pypi": {
-          "attempted_at": "2026-11-01T13:15:35.030838Z",
+          "attempted_at": "2026-11-02T15:42:19.148986Z",
           "basis": "provider_lifetime",
           "count": 77129,
           "decreased": false,
-          "error": null,
+          "error": "RetryError: HTTPSConnectionPool(host='pepy.tech', port=443): Max retries exceeded with url: /api/v2/projects/bedrock-server-manager (Caused by ResponseError('too many 503 error responses'))",
           "identity": {
             "kind": "pypi",
             "package": "bedrock-server-manager"
           },
           "label": "PyPI downloads",
           "sampled_at": "2026-11-01T13:15:35.030838Z",
-          "status": "fresh"
+          "status": "stale"
         }
       },
-      "status": "fresh",
-      "total": 103380,
+      "status": "stale",
+      "total": 103769,
       "url": "https://github.com/DMedina559/bedrock-server-manager"
     },
     "bsm-api-client": {
       "growth": {
-        "daily": 41,
+        "daily": null,
         "monthly": null,
-        "weekly": 163
+        "weekly": null
       },
       "milestones": {
         "next": 25000,
@@ -80,29 +80,29 @@
       "name": "BSM API Client",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-01T13:15:35.030838Z",
+          "attempted_at": "2026-11-02T15:42:19.148986Z",
           "basis": "provider_lifetime",
           "count": 19588,
           "decreased": false,
-          "error": null,
+          "error": "RetryError: HTTPSConnectionPool(host='pepy.tech', port=443): Max retries exceeded with url: /api/v2/projects/bsm-api-client (Caused by ResponseError('too many 503 error responses'))",
           "identity": {
             "kind": "pypi",
             "package": "bsm-api-client"
           },
           "label": "PyPI downloads",
           "sampled_at": "2026-11-01T13:15:35.030838Z",
-          "status": "fresh"
+          "status": "stale"
         }
       },
-      "status": "fresh",
+      "status": "stale",
       "total": 19588,
       "url": "https://github.com/DMedina559/bsm-api-client"
     },
     "bsm-cli": {
       "growth": {
-        "daily": 37,
+        "daily": null,
         "monthly": null,
-        "weekly": 127
+        "weekly": null
       },
       "milestones": {
         "next": 5000,
@@ -111,29 +111,29 @@
       "name": "BSM CLI",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-01T13:15:35.030838Z",
+          "attempted_at": "2026-11-02T15:42:19.148986Z",
           "basis": "provider_lifetime",
           "count": 4132,
           "decreased": false,
-          "error": null,
+          "error": "RetryError: HTTPSConnectionPool(host='pepy.tech', port=443): Max retries exceeded with url: /api/v2/projects/bsm-cli (Caused by ResponseError('too many 503 error responses'))",
           "identity": {
             "kind": "pypi",
             "package": "bsm-cli"
           },
           "label": "PyPI downloads",
           "sampled_at": "2026-11-01T13:15:35.030838Z",
-          "status": "fresh"
+          "status": "stale"
         }
       },
-      "status": "fresh",
+      "status": "stale",
       "total": 4132,
       "url": "https://github.com/DMedina559/bsm-cli"
     },
     "bsm-test-utils": {
       "growth": {
-        "daily": 37,
+        "daily": null,
         "monthly": null,
-        "weekly": 162
+        "weekly": null
       },
       "milestones": {
         "next": 5000,
@@ -142,25 +142,25 @@
       "name": "BSM Test Utilities",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-01T13:15:35.030838Z",
+          "attempted_at": "2026-11-02T15:42:19.148986Z",
           "basis": "provider_lifetime",
           "count": 2671,
           "decreased": false,
-          "error": null,
+          "error": "RetryError: HTTPSConnectionPool(host='pepy.tech', port=443): Max retries exceeded with url: /api/v2/projects/bsm-test-utils (Caused by ResponseError('too many 503 error responses'))",
           "identity": {
             "kind": "pypi",
             "package": "bsm-test-utils"
           },
           "label": "PyPI downloads",
           "sampled_at": "2026-11-01T13:15:35.030838Z",
-          "status": "fresh"
+          "status": "stale"
         }
       },
-      "status": "fresh",
+      "status": "stale",
       "total": 2671,
       "url": "https://github.com/DMedina559/bsm-test-utils"
     }
   },
   "schema_version": 1,
-  "status": "fresh"
+  "status": "degraded"
 }
