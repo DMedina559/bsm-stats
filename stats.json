@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-02T15:42:19.148986Z",
+  "collected_at": "2026-11-03T14:06:05.895714Z",
   "history": [
     "history/2026-10.json",
     "history/2026-11.json"
@@ -19,9 +19,9 @@
       "name": "Bedrock Server Manager",
       "sources": {
         "docker": {
-          "attempted_at": "2026-11-02T15:42:19.148986Z",
+          "attempted_at": "2026-11-03T14:06:05.895714Z",
           "basis": "provider_lifetime",
-          "count": 23625,
+          "count": 23962,
           "decreased": false,
           "error": null,
           "identity": {
@@ -29,13 +29,13 @@
             "repository": "dmedina559/bedrock-server-manager"
           },
           "label": "Docker Hub pulls",
-          "sampled_at": "2026-11-02T15:42:19.148986Z",
+          "sampled_at": "2026-11-03T14:06:05.895714Z",
           "status": "fresh"
         },
         "ghcr": {
-          "attempted_at": "2026-11-02T15:42:19.148986Z",
+          "attempted_at": "2026-11-03T14:06:05.895714Z",
           "basis": "provider_lifetime",
-          "count": 3015,
+          "count": 3029,
           "decreased": false,
           "error": null,
           "identity": {
@@ -45,26 +45,26 @@
             "repository": "bedrock-server-manager"
           },
           "label": "GHCR downloads",
-          "sampled_at": "2026-11-02T15:42:19.148986Z",
+          "sampled_at": "2026-11-03T14:06:05.895714Z",
           "status": "fresh"
         },
         "pypi": {
-          "attempted_at": "2026-11-02T15:42:19.148986Z",
+          "attempted_at": "2026-11-03T14:06:05.895714Z",
           "basis": "provider_lifetime",
-          "count": 77129,
+          "count": 77287,
           "decreased": false,
-          "error": "RetryError: HTTPSConnectionPool(host='pepy.tech', port=443): Max retries exceeded with url: /api/v2/projects/bedrock-server-manager (Caused by ResponseError('too many 503 error responses'))",
+          "error": null,
           "identity": {
             "kind": "pypi",
             "package": "bedrock-server-manager"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-01T13:15:35.030838Z",
-          "status": "stale"
+          "sampled_at": "2026-11-03T14:06:05.895714Z",
+          "status": "fresh"
         }
       },
-      "status": "stale",
-      "total": 103769,
+      "status": "fresh",
+      "total": 104278,
       "url": "https://github.com/DMedina559/bedrock-server-manager"
     },
     "bsm-api-client": {
@@ -80,22 +80,22 @@
       "name": "BSM API Client",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-02T15:42:19.148986Z",
+          "attempted_at": "2026-11-03T14:06:05.895714Z",
           "basis": "provider_lifetime",
-          "count": 19588,
+          "count": 19728,
           "decreased": false,
-          "error": "RetryError: HTTPSConnectionPool(host='pepy.tech', port=443): Max retries exceeded with url: /api/v2/projects/bsm-api-client (Caused by ResponseError('too many 503 error responses'))",
+          "error": null,
           "identity": {
             "kind": "pypi",
             "package": "bsm-api-client"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-01T13:15:35.030838Z",
-          "status": "stale"
+          "sampled_at": "2026-11-03T14:06:05.895714Z",
+          "status": "fresh"
         }
       },
-      "status": "stale",
-      "total": 19588,
+      "status": "fresh",
+      "total": 19728,
       "url": "https://github.com/DMedina559/bsm-api-client"
     },
     "bsm-cli": {
@@ -111,22 +111,22 @@
       "name": "BSM CLI",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-02T15:42:19.148986Z",
+          "attempted_at": "2026-11-03T14:06:05.895714Z",
           "basis": "provider_lifetime",
-          "count": 4132,
+          "count": 4247,
           "decreased": false,
-          "error": "RetryError: HTTPSConnectionPool(host='pepy.tech', port=443): Max retries exceeded with url: /api/v2/projects/bsm-cli (Caused by ResponseError('too many 503 error responses'))",
+          "error": null,
           "identity": {
             "kind": "pypi",
             "package": "bsm-cli"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-01T13:15:35.030838Z",
-          "status": "stale"
+          "sampled_at": "2026-11-03T14:06:05.895714Z",
+          "status": "fresh"
         }
       },
-      "status": "stale",
-      "total": 4132,
+      "status": "fresh",
+      "total": 4247,
       "url": "https://github.com/DMedina559/bsm-cli"
     },
     "bsm-test-utils": {
@@ -142,25 +142,25 @@
       "name": "BSM Test Utilities",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-02T15:42:19.148986Z",
+          "attempted_at": "2026-11-03T14:06:05.895714Z",
           "basis": "provider_lifetime",
-          "count": 2671,
+          "count": 2741,
           "decreased": false,
-          "error": "RetryError: HTTPSConnectionPool(host='pepy.tech', port=443): Max retries exceeded with url: /api/v2/projects/bsm-test-utils (Caused by ResponseError('too many 503 error responses'))",
+          "error": null,
           "identity": {
             "kind": "pypi",
             "package": "bsm-test-utils"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-01T13:15:35.030838Z",
-          "status": "stale"
+          "sampled_at": "2026-11-03T14:06:05.895714Z",
+          "status": "fresh"
         }
       },
-      "status": "stale",
-      "total": 2671,
+      "status": "fresh",
+      "total": 2741,
       "url": "https://github.com/DMedina559/bsm-test-utils"
     }
   },
   "schema_version": 1,
-  "status": "degraded"
+  "status": "fresh"
 }

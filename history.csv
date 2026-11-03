@@ -107,3 +107,9 @@ date,project,source,count,status,sampled_at,decreased
 2026-11-02,bsm-api-client,pypi,19588,stale,2026-11-01T13:15:35.030838Z,False
 2026-11-02,bsm-cli,pypi,4132,stale,2026-11-01T13:15:35.030838Z,False
 2026-11-02,bsm-test-utils,pypi,2671,stale,2026-11-01T13:15:35.030838Z,False
+2026-11-03,bedrock-server-manager,docker,23962,fresh,2026-11-03T14:06:05.895714Z,False
+2026-11-03,bedrock-server-manager,ghcr,3029,fresh,2026-11-03T14:06:05.895714Z,False
+2026-11-03,bedrock-server-manager,pypi,77287,fresh,2026-11-03T14:06:05.895714Z,False
+2026-11-03,bsm-api-client,pypi,19728,fresh,2026-11-03T14:06:05.895714Z,False
+2026-11-03,bsm-cli,pypi,4247,fresh,2026-11-03T14:06:05.895714Z,False
+2026-11-03,bsm-test-utils,pypi,2741,fresh,2026-11-03T14:06:05.895714Z,False
