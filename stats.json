@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-04T14:26:56.835447Z",
+  "collected_at": "2026-11-05T14:34:51.535028Z",
   "history": [
     "history/2026-10.json",
     "history/2026-11.json"
@@ -8,7 +8,7 @@
   "projects": {
     "bedrock-server-manager": {
       "growth": {
-        "daily": 580,
+        "daily": null,
         "monthly": null,
         "weekly": null
       },
@@ -19,9 +19,9 @@
       "name": "Bedrock Server Manager",
       "sources": {
         "docker": {
-          "attempted_at": "2026-11-04T14:26:56.835447Z",
+          "attempted_at": "2026-11-05T14:34:51.535028Z",
           "basis": "provider_lifetime",
-          "count": 24307,
+          "count": 24716,
           "decreased": false,
           "error": null,
           "identity": {
@@ -29,15 +29,15 @@
             "repository": "dmedina559/bedrock-server-manager"
           },
           "label": "Docker Hub pulls",
-          "sampled_at": "2026-11-04T14:26:56.835447Z",
+          "sampled_at": "2026-11-05T14:34:51.535028Z",
           "status": "fresh"
         },
         "ghcr": {
-          "attempted_at": "2026-11-04T14:26:56.835447Z",
+          "attempted_at": "2026-11-05T14:34:51.535028Z",
           "basis": "provider_lifetime",
           "count": 3041,
           "decreased": false,
-          "error": null,
+          "error": "RetryError: HTTPSConnectionPool(host='github.com', port=443): Max retries exceeded with url: /DMedina559/bedrock-server-manager/pkgs/container/bedrock-server-manager (Caused by ResponseError('too many 504 error responses'))",
           "identity": {
             "kind": "ghcr",
             "owner": "DMedina559",
@@ -46,12 +46,12 @@
           },
           "label": "GHCR downloads",
           "sampled_at": "2026-11-04T14:26:56.835447Z",
-          "status": "fresh"
+          "status": "stale"
         },
         "pypi": {
-          "attempted_at": "2026-11-04T14:26:56.835447Z",
+          "attempted_at": "2026-11-05T14:34:51.535028Z",
           "basis": "provider_lifetime",
-          "count": 77510,
+          "count": 77840,
           "decreased": false,
           "error": null,
           "identity": {
@@ -59,17 +59,17 @@
             "package": "bedrock-server-manager"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-04T14:26:56.835447Z",
+          "sampled_at": "2026-11-05T14:34:51.535028Z",
           "status": "fresh"
         }
       },
-      "status": "fresh",
-      "total": 104858,
+      "status": "stale",
+      "total": 105597,
       "url": "https://github.com/DMedina559/bedrock-server-manager"
     },
     "bsm-api-client": {
       "growth": {
-        "daily": 26,
+        "daily": 60,
         "monthly": null,
         "weekly": null
       },
@@ -80,9 +80,9 @@
       "name": "BSM API Client",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-04T14:26:56.835447Z",
+          "attempted_at": "2026-11-05T14:34:51.535028Z",
           "basis": "provider_lifetime",
-          "count": 19754,
+          "count": 19814,
           "decreased": false,
           "error": null,
           "identity": {
@@ -90,17 +90,17 @@
             "package": "bsm-api-client"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-04T14:26:56.835447Z",
+          "sampled_at": "2026-11-05T14:34:51.535028Z",
           "status": "fresh"
         }
       },
       "status": "fresh",
-      "total": 19754,
+      "total": 19814,
       "url": "https://github.com/DMedina559/bsm-api-client"
     },
     "bsm-cli": {
       "growth": {
-        "daily": 19,
+        "daily": 26,
         "monthly": null,
         "weekly": null
       },
@@ -111,9 +111,9 @@
       "name": "BSM CLI",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-04T14:26:56.835447Z",
+          "attempted_at": "2026-11-05T14:34:51.535028Z",
           "basis": "provider_lifetime",
-          "count": 4266,
+          "count": 4292,
           "decreased": false,
           "error": null,
           "identity": {
@@ -121,17 +121,17 @@
             "package": "bsm-cli"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-04T14:26:56.835447Z",
+          "sampled_at": "2026-11-05T14:34:51.535028Z",
           "status": "fresh"
         }
       },
       "status": "fresh",
-      "total": 4266,
+      "total": 4292,
       "url": "https://github.com/DMedina559/bsm-cli"
     },
     "bsm-test-utils": {
       "growth": {
-        "daily": 13,
+        "daily": 23,
         "monthly": null,
         "weekly": null
       },
@@ -142,9 +142,9 @@
       "name": "BSM Test Utilities",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-04T14:26:56.835447Z",
+          "attempted_at": "2026-11-05T14:34:51.535028Z",
           "basis": "provider_lifetime",
-          "count": 2754,
+          "count": 2777,
           "decreased": false,
           "error": null,
           "identity": {
@@ -152,15 +152,15 @@
             "package": "bsm-test-utils"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-04T14:26:56.835447Z",
+          "sampled_at": "2026-11-05T14:34:51.535028Z",
           "status": "fresh"
         }
       },
       "status": "fresh",
-      "total": 2754,
+      "total": 2777,
       "url": "https://github.com/DMedina559/bsm-test-utils"
     }
   },
   "schema_version": 1,
-  "status": "fresh"
+  "status": "degraded"
 }
