@@ -1,5 +1,5 @@
 {
-  "collected_at": "2026-11-10T14:49:04.294216Z",
+  "collected_at": "2026-11-11T14:14:07.669553Z",
   "history": [
     "history/2026-10.json",
     "history/2026-11.json"
@@ -8,7 +8,7 @@
   "projects": {
     "bedrock-server-manager": {
       "growth": {
-        "daily": 389,
+        "daily": 496,
         "monthly": null,
         "weekly": null
       },
@@ -19,9 +19,9 @@
       "name": "Bedrock Server Manager",
       "sources": {
         "docker": {
-          "attempted_at": "2026-11-10T14:49:04.294216Z",
+          "attempted_at": "2026-11-11T14:14:07.669553Z",
           "basis": "provider_lifetime",
-          "count": 26652,
+          "count": 27056,
           "decreased": false,
           "error": null,
           "identity": {
@@ -29,13 +29,13 @@
             "repository": "dmedina559/bedrock-server-manager"
           },
           "label": "Docker Hub pulls",
-          "sampled_at": "2026-11-10T14:49:04.294216Z",
+          "sampled_at": "2026-11-11T14:14:07.669553Z",
           "status": "fresh"
         },
         "ghcr": {
-          "attempted_at": "2026-11-10T14:49:04.294216Z",
+          "attempted_at": "2026-11-11T14:14:07.669553Z",
           "basis": "provider_lifetime",
-          "count": 3139,
+          "count": 3147,
           "decreased": false,
           "error": null,
           "identity": {
@@ -45,13 +45,13 @@
             "repository": "bedrock-server-manager"
           },
           "label": "GHCR downloads",
-          "sampled_at": "2026-11-10T14:49:04.294216Z",
+          "sampled_at": "2026-11-11T14:14:07.669553Z",
           "status": "fresh"
         },
         "pypi": {
-          "attempted_at": "2026-11-10T14:49:04.294216Z",
+          "attempted_at": "2026-11-11T14:14:07.669553Z",
           "basis": "provider_lifetime",
-          "count": 78527,
+          "count": 78611,
           "decreased": false,
           "error": null,
           "identity": {
@@ -59,19 +59,19 @@
             "package": "bedrock-server-manager"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-10T14:49:04.294216Z",
+          "sampled_at": "2026-11-11T14:14:07.669553Z",
           "status": "fresh"
         }
       },
       "status": "fresh",
-      "total": 108318,
+      "total": 108814,
       "url": "https://github.com/DMedina559/bedrock-server-manager"
     },
     "bsm-api-client": {
       "growth": {
-        "daily": 31,
+        "daily": 89,
         "monthly": null,
-        "weekly": 978
+        "weekly": 1041
       },
       "milestones": {
         "next": 25000,
@@ -80,9 +80,9 @@
       "name": "BSM API Client",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-10T14:49:04.294216Z",
+          "attempted_at": "2026-11-11T14:14:07.669553Z",
           "basis": "provider_lifetime",
-          "count": 20706,
+          "count": 20795,
           "decreased": false,
           "error": null,
           "identity": {
@@ -90,19 +90,19 @@
             "package": "bsm-api-client"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-10T14:49:04.294216Z",
+          "sampled_at": "2026-11-11T14:14:07.669553Z",
           "status": "fresh"
         }
       },
       "status": "fresh",
-      "total": 20706,
+      "total": 20795,
       "url": "https://github.com/DMedina559/bsm-api-client"
     },
     "bsm-cli": {
       "growth": {
-        "daily": 23,
+        "daily": 35,
         "monthly": null,
-        "weekly": 483
+        "weekly": 499
       },
       "milestones": {
         "next": 5000,
@@ -111,9 +111,9 @@
       "name": "BSM CLI",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-10T14:49:04.294216Z",
+          "attempted_at": "2026-11-11T14:14:07.669553Z",
           "basis": "provider_lifetime",
-          "count": 4730,
+          "count": 4765,
           "decreased": false,
           "error": null,
           "identity": {
@@ -121,19 +121,19 @@
             "package": "bsm-cli"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-10T14:49:04.294216Z",
+          "sampled_at": "2026-11-11T14:14:07.669553Z",
           "status": "fresh"
         }
       },
       "status": "fresh",
-      "total": 4730,
+      "total": 4765,
       "url": "https://github.com/DMedina559/bsm-cli"
     },
     "bsm-test-utils": {
       "growth": {
         "daily": 2,
         "monthly": null,
-        "weekly": 97
+        "weekly": 86
       },
       "milestones": {
         "next": 5000,
@@ -142,9 +142,9 @@
       "name": "BSM Test Utilities",
       "sources": {
         "pypi": {
-          "attempted_at": "2026-11-10T14:49:04.294216Z",
+          "attempted_at": "2026-11-11T14:14:07.669553Z",
           "basis": "provider_lifetime",
-          "count": 2838,
+          "count": 2840,
           "decreased": false,
           "error": null,
           "identity": {
@@ -152,12 +152,12 @@
             "package": "bsm-test-utils"
           },
           "label": "PyPI downloads",
-          "sampled_at": "2026-11-10T14:49:04.294216Z",
+          "sampled_at": "2026-11-11T14:14:07.669553Z",
           "status": "fresh"
         }
       },
       "status": "fresh",
-      "total": 2838,
+      "total": 2840,
       "url": "https://github.com/DMedina559/bsm-test-utils"
     }
   },
